@@ -1,12 +1,12 @@
-resource "azurerm_resource_group" "eensy_db" {
-  name     = "eensy-db"
+resource "azurerm_resource_group" "eensy_etl" {
+  name     = "eensy-etl"
   location = "eastus2"
 }
 
 resource "azurerm_mssql_server" "eensy_db_server" {
   name = "eensy-db-server"
-  resource_group_name = azurerm_resource_group.eensy_db.name
-  location = azurerm_resource_group.eensy_db.location
+  resource_group_name = azurerm_resource_group.eensy_etl.name
+  location = azurerm_resource_group.eensy_etl.location
   version = "12.0"
   administrator_login = var.db_username
   administrator_login_password = var.db_password

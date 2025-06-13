@@ -10,3 +10,9 @@ Did some research on Github Events API and created a Github auth token. Added th
 ## 2025-06-11 20:23:22
 Finished the Terraform for the database and applied this. I have a SQL database in Azure!
 
+
+## 2025-06-13 14:58:08
+the way to link up a function with it's code?
+> a Function App Function can be imported using the resource id, e.g.
+`terraform import azurerm_function_app_function.example "/subscriptions/12345678-1234-9876-4563-123456789012/resourceGroups/resGroup1/providers/Microsoft.Web/sites/site1/functions/function1"`
+
